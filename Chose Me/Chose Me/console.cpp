@@ -9,5 +9,6 @@ void gotoxy(int x, int y)
 
 void GameSetting()
 {
-
+	cout << "이동 : ↑ ↓ ← →" << endl;
+	cout << "상호작용 : E";
 }

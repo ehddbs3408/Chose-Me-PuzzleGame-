@@ -24,6 +24,9 @@
     <ClCompile Include="room.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="intro.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h">
@@ -33,6 +36,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="item.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="intro.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

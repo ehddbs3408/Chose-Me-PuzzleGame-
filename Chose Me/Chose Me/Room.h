@@ -22,4 +22,5 @@ void UpMove(char Room[HEIGHT][WEIGHT], PPLAYER player);
 void DownMove(char Room[HEIGHT][WEIGHT], PPLAYER player);
 void RightMove(char Room[HEIGHT][WEIGHT], PPLAYER player);
 void LeftMove(char Room[HEIGHT][WEIGHT], PPLAYER player);
+void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player);
 void GetItem();

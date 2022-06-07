@@ -67,6 +67,38 @@ void SetRoom(char Room[HEIGHT][WEIGHT], PPLAYER player,PPOS pos,int stage)
 		strcpy_s(Room[18], "0000000000000000000");
 		strcpy_s(Room[19], "0000000000000000000");
 		break;
+	case 3:
+		player->pos.x = 1;
+		player->pos.y = 1;
+		pos->x = 15;
+		pos->y = 9;
+		strcpy_s(Room[0], "0000000000000000000");
+		strcpy_s(Room[1], "0000000000000000000");
+		strcpy_s(Room[2], "0000000000000000000");
+		strcpy_s(Room[3], "0000000000000000000");
+		strcpy_s(Room[4], "0000000000000000000");
+		strcpy_s(Room[5], "0000000000000000000");
+		strcpy_s(Room[6], "0000000000000000000");
+		strcpy_s(Room[7], "0000000000000000000");
+		strcpy_s(Room[8], "0000000000000000000");
+		strcpy_s(Room[9], "0000000000000000000");
+		strcpy_s(Room[10], "0000000000000000000");
+		strcpy_s(Room[11], "0000000000000000000");
+		strcpy_s(Room[12], "0000000000000000000");
+		strcpy_s(Room[13], "0000000000000000000");
+		strcpy_s(Room[14], "0000000000000000000");
+		strcpy_s(Room[15], "0000000000000000000");
+		strcpy_s(Room[16], "0000000000000000000");
+		strcpy_s(Room[17], "0000000000000000000");
+		strcpy_s(Room[18], "0000000000000000000");
+		strcpy_s(Room[19], "0000000000000000000");
+		break;
+	case 4:
+		break;
+	case 5:
+		break;
+	case 6:
+		break;
 	default:
 		break;
 	}
@@ -133,7 +165,7 @@ void UpMove(char Room[HEIGHT][WEIGHT], PPLAYER player)
 {
 	if (player->pos.y - 1 >= 0)
 	{
-		if (Room[player->pos.y - 1][player->pos.x] != '1')
+		if (Room[player->pos.y - 1][player->pos.x] == '0')
 		{
 			player->pos.y = player->pos.y - 1;
 		}
@@ -143,7 +175,7 @@ void DownMove(char Room[HEIGHT][WEIGHT], PPLAYER player)
 {
 	if (player->pos.y >= 0)
 	{
-		if (Room[player->pos.y + 1][player->pos.x] != '1')
+		if (Room[player->pos.y + 1][player->pos.x] == '0')
 		{
 			player->pos.y = player->pos.y + 1;
 		}
@@ -153,7 +185,7 @@ void RightMove(char Room[HEIGHT][WEIGHT], PPLAYER player)
 {
 	if (player->pos.x >= 0)
 	{
-		if (Room[player->pos.y ][player->pos.x+1] != '1')
+		if (Room[player->pos.y ][player->pos.x+1] == '0')
 		{
 			player->pos.x = player->pos.x + 1;
 		}
@@ -163,11 +195,15 @@ void LeftMove(char Room[HEIGHT][WEIGHT], PPLAYER player)
 {
 	if (player->pos.x >= 0)
 	{
-		if (Room[player->pos.y][player->pos.x - 1] != '1')
+		if (Room[player->pos.y][player->pos.x - 1] == '0')
 		{
 			player->pos.x = player->pos.x - 1;
 		}
 	}
+}
+void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player)
+{
+	
 }
 void GetItem()
 {
