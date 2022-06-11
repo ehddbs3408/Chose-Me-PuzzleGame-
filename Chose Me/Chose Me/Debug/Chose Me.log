@@ -1,2 +1,12 @@
-﻿  room.cpp
+﻿  console.cpp
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\console.cpp(5,18): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\console.cpp(5,20): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+  intro.cpp
+  main.cpp
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(37,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(38,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(41,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(42,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+  room.cpp
+  코드를 생성하고 있습니다...
   Chose Me.vcxproj -> C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Debug\Chose Me.exe

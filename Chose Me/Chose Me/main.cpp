@@ -1,39 +1,55 @@
-#include "head.h"
+﻿#include "head.h"
 #include "Room.h"
 #include "intro.h"
 
 char strRoom[HEIGHT][WEIGHT];
 PLAYER player;
-Position endPos;
 
 int main(void)
 {
+
 	IntroEvent();
 
 
 	int stage = 1;
 	player.pos.x = 1;
 	player.pos.y = 1;
-	SetRoom(strRoom,&player,&endPos, stage);
+	SetRoom(strRoom,&player, stage);
 	char inputMovementKey;
 
 	while (true)
 	{
 		gotoxy(0, 0);
-		UpdateRoom(strRoom,&player,&endPos);
+		UpdateRoom(strRoom,&player);
 		GameSetting();
 		Move(strRoom,&player);
 		inputMovementKey = _getch();
 
-		if (ExitRoom(&player, &endPos))
+		if (ExitRoom(&player))
 		{
 			stage++;
-			SetRoom(strRoom, &player, &endPos, stage);
+			if (stage == 4)
+			{
+				system("cls");
+				for (int i = 0; i < 10; i++)
+				{
+					cout << "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒" << endl;
+					cout << "▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒" << endl;
+					cout << "▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒" << endl;
+					cout << "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒" << endl;
+					cout << "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒" << endl;
+					cout << "▒▒▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▓▓▓▓▒▒" << endl;
+					cout << "▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒▒▓▒" << endl;
+				}
+				Sleep(200);
+				system("cls");
+			}
+			SetRoom(strRoom, &player, stage);
 		}
 
 		if (inputMovementKey == 'E' || inputMovementKey == 'e')
 		{
-			CheckInteraction(strRoom,&player);
+			CheckInteraction(strRoom,&player,stage);
 		}
 	}
 	
