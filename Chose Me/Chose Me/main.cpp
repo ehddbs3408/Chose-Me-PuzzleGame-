@@ -7,11 +7,12 @@ PLAYER player;
 
 int main(void)
 {
+	SetRoomData();
 
 	IntroEvent();
 
 
-	int stage = 1;
+	int stage = 3;
 	player.pos.x = 1;
 	player.pos.y = 1;
 	SetRoom(strRoom,&player, stage);

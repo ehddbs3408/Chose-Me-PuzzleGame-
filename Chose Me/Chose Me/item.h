@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 enum ItemType
 {
 	None,
@@ -34,5 +35,30 @@ public:
 	void PrintItemEx()
 	{
 		std::cout << itemExplanation;
+	}
+};
+class RoomData
+{
+	int stage;
+	int boxSecretNumber;
+	std::string hintMassage;
+public:
+	void SetData(int stage, int num, std::string ex)
+	{
+		this->stage = stage;
+		boxSecretNumber = num;
+		hintMassage = ex;
+	}
+	int GetStageNum()
+	{
+		return stage;
+	}
+	int GetBoxNum()
+	{
+		return boxSecretNumber;
+	}
+	void PrintHintData()
+	{
+		std::cout << hintMassage;
 	}
 };

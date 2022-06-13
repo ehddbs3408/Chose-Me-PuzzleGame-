@@ -18,6 +18,7 @@ typedef struct _player
 
 }PLAYER, * PPLAYER;
 bool ExitRoom(PPLAYER player);
+void SetRoomData();
 void SetRoom(char Room[HEIGHT][WEIGHT], PPLAYER player, int stage);
 void UpdateRoom(char Room[HEIGHT][WEIGHT], PPLAYER player);
 void Move(char Maze[HEIGHT][WEIGHT], PPLAYER playerPos);
