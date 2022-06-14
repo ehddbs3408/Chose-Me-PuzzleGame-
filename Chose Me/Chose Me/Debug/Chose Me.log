@@ -1,2 +1,1 @@
-﻿  room.cpp
-  Chose Me.vcxproj -> C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Debug\Chose Me.exe
+﻿LINK : fatal error LNK1168: C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Debug\Chose Me.exe을(를) 쓰기용으로 열 수 없습니다.

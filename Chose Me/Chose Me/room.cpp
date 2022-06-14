@@ -6,7 +6,8 @@ RoomData room[5];
 
 void SetRoomData()
 {
-	room[0].SetData(4, 1234, "동서남북");
+	room[0].SetData(4, 120,"사람123은 친구26을 좋아해 그런데 사람29가 그걸 싫어해 ");
+	room[1].SetData(5, 4567, "10시 : 아래,오른쪽,위,아래,아래 2시 : 왼쪽,아래,오른쪽,아래,왼쪽 9시 : 아래,오른쪽,위,왼쪽,위,오른쪽 4시 : 위,위,왼쪽 ");
 }
 
 bool ExitRoom(PPLAYER player)
@@ -14,6 +15,7 @@ bool ExitRoom(PPLAYER player)
 	if (isNext)
 	{
 		isNext = false;
+		system("cls");
 		cout << "┌┐" << endl;
 		cout << "││ " << "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
 		cout << "└┘" << endl;
@@ -126,8 +128,52 @@ void SetRoom(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 		strcpy_s(Room[19], "1111111111111111111");
 		break;
 	case 5:
+		player->pos.x = 9;
+		player->pos.y = 10;
+		  strcpy_s(Room[0], "1111111111111111111");
+		  strcpy_s(Room[1], "1000100000000010001");
+		  strcpy_s(Room[2], "1070100400000010701");
+		  strcpy_s(Room[3], "1000100000000010001");
+		  strcpy_s(Room[4], "1000111111211110001");
+		  strcpy_s(Room[5], "1000100000000010001");
+		  strcpy_s(Room[6], "1000100000000010001");
+		  strcpy_s(Room[7], "1000100000000010001");
+		  strcpy_s(Room[8], "1000100000000010001");
+		  strcpy_s(Room[9], "1000105000006010001");
+		strcpy_s(Room[10], "1070100000000010701");
+		strcpy_s(Room[11], "1000100000000010001");
+		strcpy_s(Room[12], "1000100000000010001");
+		strcpy_s(Room[13], "1000100000000010001");
+		strcpy_s(Room[14], "1000100000000010001");
+		strcpy_s(Room[15], "1000111112111110001");
+		strcpy_s(Room[16], "1000100000000010001");
+		strcpy_s(Room[17], "1000100000040010001");
+		strcpy_s(Room[18], "1070100000000010701");
+		strcpy_s(Room[19], "1111111111111111111");
 		break;
 	case 6:
+		player->pos.x = 9;
+		player->pos.y = 10;
+		strcpy_s(Room[0], "0000000000000000000");
+		strcpy_s(Room[1], "0000000000000000000");
+		strcpy_s(Room[2], "0000000000000000000");
+		strcpy_s(Room[3], "0000000000000000000");
+		strcpy_s(Room[4], "0000000000000000000");
+		strcpy_s(Room[5], "0000000000000000000");
+		strcpy_s(Room[6], "0000000000000000000");
+		strcpy_s(Room[7], "0000000000000000000");
+		strcpy_s(Room[8], "0000000000000000000");
+		strcpy_s(Room[9], "0000000000000000000");
+		strcpy_s(Room[10], "0400000000000000040");
+		strcpy_s(Room[11], "0000000000000000000");
+		strcpy_s(Room[12], "0000000000000000000");
+		strcpy_s(Room[13], "0000000000000000000");
+		strcpy_s(Room[14], "0000000000000000000");
+		strcpy_s(Room[15], "0000000000000000000");
+		strcpy_s(Room[16], "0000000000000000000");
+		strcpy_s(Room[17], "0000000000000000000");
+		strcpy_s(Room[18], "0000000000000000000");
+		strcpy_s(Room[19], "0000000000000000000");
 		break;
 	default:
 		break;
