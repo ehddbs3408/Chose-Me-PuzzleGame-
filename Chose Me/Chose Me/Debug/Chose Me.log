@@ -1,1 +1,6 @@
-﻿LINK : fatal error LNK1168: C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Debug\Chose Me.exe을(를) 쓰기용으로 열 수 없습니다.
+﻿  main.cpp
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(41,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(42,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(45,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(46,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+  Chose Me.vcxproj -> C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Debug\Chose Me.exe

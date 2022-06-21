@@ -7,7 +7,7 @@ RoomData room[5];
 void SetRoomData()
 {
 	room[0].SetData(4, 120,"사람123은 친구26을 좋아해 그런데 사람29가 그걸 싫어해 ");
-	room[1].SetData(5, 4567, "10시 : 아래,오른쪽,위,아래,아래 2시 : 왼쪽,아래,오른쪽,아래,왼쪽 9시 : 아래,오른쪽,위,왼쪽,위,오른쪽 4시 : 위,위,왼쪽 ");
+	room[1].SetData(5, 4567, "10시 : ↓,→,↑,↓,↓ 2시 : ←,↓,→,↓,← 9시 : ↓,→,↑,←,↑,→ 4시 : ↑,↑,←,↓ ");
 }
 
 bool ExitRoom(PPLAYER player)
@@ -16,9 +16,6 @@ bool ExitRoom(PPLAYER player)
 	{
 		isNext = false;
 		system("cls");
-		cout << "┌┐" << endl;
-		cout << "││ " << "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
-		cout << "└┘" << endl;
 		return true;
 	}
 	return false;
@@ -291,6 +288,9 @@ void LeftMove(char Room[HEIGHT][WEIGHT], PPLAYER player)
 }
 void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 {
+	system("cls");
+	UpdateRoom(Room, player);
+	GameSetting();
 	if (Room[player->pos.y - 1][player->pos.x] == '3'||
 		Room[player->pos.y + 1][player->pos.x] == '3'||
 		Room[player->pos.y][player->pos.x - 1] == '3'||
@@ -316,19 +316,15 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 		if (stage == 3)
 		{
 			cout << "┌┐" << endl;
-			cout << "││ " << "사람을 1명 구하셨습니다.. 다음방으로 가실려면 아무키나 입력해주세요!!ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+			cout << "││ " << "사람을 1명 구하셨습니다.. 다음방으로 가실려면 아무키나 입력해주세요!!" << endl;
 			cout << "└┘" << endl;
 			isNext = true;
 		}
 		else
 		{
 			cout << "┌┐" << endl;
-			cout << "││ " << "사람을 구하셨습니다!! 다음방으로 가실려면 아무키나 입력해주세요!!ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+			cout << "││ " << "사람을 구하셨습니다!! 다음방으로 가실려면 아무키나 입력해주세요!!" << endl;
 			cout << "└┘" << endl;
-			cout << "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
-			cout << "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
-			cout << "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
-			cout << "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
 			isNext = true;
 		}
 	}
@@ -338,9 +334,10 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 		Room[player->pos.y][player->pos.x + 1] == '5'
 		)
 	{
+
 		int input;
 		cout << "┌┐" << endl;
-		cout << "││ " << "비번을 입력해주세요!ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+		cout << "││ " << "비번을 입력해주세요!" << endl;
 		cout << "└┘" << endl;
 		cin >> input;
 		if (input == room[stage-4].GetBoxNum())
@@ -354,17 +351,15 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 			if (Room[player->pos.y][player->pos.x + 1] == '5')
 				Room[player->pos.y][player->pos.x + 1] = '0';
 			cout << "┌┐" << endl;
-			cout << "││ " << "정답!ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+			cout << "││ " << "정답!" << endl;
 			cout << "└┘" << endl;
-			cout << "ㅤㅤㅤㅤㅤㅤㅤ";
 			Room[5][5] = '3';
 		}
 		else
 		{
 			cout << "┌┐" << endl;
-			cout << "││ " << "삐비~~오답입니다.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+			cout << "││ " << "삐비~~오답입니다." << endl;
 			cout << "└┘" << endl;
-			cout << "ㅤㅤㅤㅤㅤㅤㅤ";
 		}
 	}
 	else if (Room[player->pos.y - 1][player->pos.x] == '6' ||
@@ -374,7 +369,7 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 		)
 	{
 		cout << "┌┐" << endl;
-		cout << "││ "; room[stage - 4].PrintHintData(); cout<< "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+		cout << "││ "; room[stage - 4].PrintHintData(); cout<< endl;
 		cout << "└┘" << endl;
 	}
 
