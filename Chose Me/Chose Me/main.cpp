@@ -14,7 +14,7 @@ int main(void)
 	IntroEvent();
 
 
-	int stage = 5;
+	int stage = 1;
 	player.pos.x = 1;
 	player.pos.y = 1;
 	SetRoom(strRoom,&player, stage);
@@ -24,7 +24,11 @@ int main(void)
 	{
 		gotoxy(0, 0);
 		UpdateRoom(strRoom,&player);
-		GameSetting();
+		if (stage < 6)
+		{
+			GameSetting();
+		}
+
 		Move(strRoom,&player);
 		inputMovementKey = _getch();
 
@@ -67,9 +71,25 @@ int main(void)
 				cout << "└┘" << endl;
 				Sleep(2500);
 				cout << "┌┐" << endl;
-				cout << "││ " << "그럼 다음 스테이지로 넘어가죠!!" << endl;
+				cout << "││ " << "그럼 다음 스테이지로 넘어ㄱ...." << endl;
 				cout << "└┘" << endl;
-				Sleep(2500);
+				Sleep(500);
+				system("cls");
+				for(int i =0;i<30;i++)
+				cout << "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒" << endl;
+				Sleep(500);
+				system("cls");
+				Sleep(100);
+				system("cls");
+				for (int i = 0; i < 30; i++)
+					cout << "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒" << endl;
+				Sleep(500);
+				system("cls");
+				Sleep(100);
+				system("cls");
+				for (int i = 0; i < 30; i++)
+					cout << "▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒" << endl;
+				Sleep(100);
 			}
 			system("cls");
 			SetRoom(strRoom, &player, stage);

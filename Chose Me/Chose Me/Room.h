@@ -13,7 +13,22 @@ typedef struct _player
 {
 	Position pos;
 	int stage = 0;
-	Item haveItem;
+	Item haveItem[10];
+	int itemCnt = -1;
+	
+	void GetItem(Item item)
+	{
+		itemCnt++;
+		haveItem[itemCnt] = item;
+	}
+	Item UseItem()
+	{
+		return haveItem[itemCnt--];
+	}
+	Item ShowItem()
+	{
+		return haveItem[itemCnt];
+	}
 
 
 }PLAYER, * PPLAYER;
