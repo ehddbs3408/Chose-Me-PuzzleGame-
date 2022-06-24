@@ -1,0 +1,19 @@
+﻿  console.cpp
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\item.h(22,1): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\console.cpp(5,18): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\console.cpp(5,20): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+  intro.cpp
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\item.h(22,1): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  main.cpp
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\item.h(22,1): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(45,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(46,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(49,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(50,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+  room.cpp
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\item.h(22,1): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다.
+  Previous IPDB not found, fall back to full compilation.
+  All 119 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  Chose Me.vcxproj -> C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\x64\Release\Chose Me.exe
