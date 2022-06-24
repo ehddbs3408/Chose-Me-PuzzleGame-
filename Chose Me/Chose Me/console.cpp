@@ -11,6 +11,7 @@ void GameSetting()
 {
 	cout << "이동 : ↑ ↓ ← →" << endl;
 	cout << "상호작용 : E" << endl;
+    cout << "종료 : Q" << endl;
 }
 
 void UpLinePrompt(int count)

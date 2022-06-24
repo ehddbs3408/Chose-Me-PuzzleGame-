@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\item.h(23,1): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(45,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(46,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(49,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\Chose Me\main.cpp(50,14): warning C4566: 유니버설 문자 이름 '\u2593'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+  Chose Me.vcxproj -> C:\Users\USER\Documents\GitHub\Chose-Me-PuzzleGame-\Chose Me\x64\Debug\Chose Me.exe

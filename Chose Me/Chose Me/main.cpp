@@ -99,6 +99,39 @@ int main(void)
 		{
 			CheckInteraction(strRoom,&player,stage);
 		}
+		if (inputMovementKey == 'Q' || inputMovementKey == 'q')
+		{
+			system("cls");
+
+			if (stage < 6)
+			{
+				cout << "┌┐" << endl;
+				cout << "││ 한번종료하면 처음부터 다시 시작됩니다. 종료하시겠습니까? " << endl;
+				cout << "└┘" << endl;
+			}
+			
+
+			cout << "1.종료 2.취소" << endl;
+			int input;
+			cin >> input;
+			if (input == 1)
+			{
+				system("cls");
+				if (stage < 6)
+				{
+					cout << "┌┐" << endl;
+					cout << "││ 시스템을 종료합니다 " << endl;
+					cout << "└┘" << endl;
+				}
+				for (int i = 3; i > 0; i--)
+				{
+					cout << i << ".." << endl;
+					Sleep(1000);
+				}
+				break;
+			}
+			system("cls");
+		}
 	}
 	
 }

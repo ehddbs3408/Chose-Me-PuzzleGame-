@@ -152,7 +152,7 @@ void SetRoom(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 	case 6:
 		player->pos.x = 10;
 		player->pos.y = 1;
-		strcpy_s(Room[0], "0000100000000000103");
+		strcpy_s(Room[0], "0000111111811111103");
 		strcpy_s(Room[1], "4000200000000000103");
 		strcpy_s(Room[2], "0000100000000000203");
 		strcpy_s(Room[3], "1111100000000000103");
@@ -165,7 +165,7 @@ void SetRoom(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 		strcpy_s(Room[10], "0000100000000000000");
 		strcpy_s(Room[11], "1111100000000000000");
 		strcpy_s(Room[12], "0000100000000000000");
-		strcpy_s(Room[13], "4000200000000000000");
+		strcpy_s(Room[13], "9000200000000000000");
 		strcpy_s(Room[14], "0000100000000000050");
 		strcpy_s(Room[15], "1111100000000000000");
 		strcpy_s(Room[16], "0000100000000000000");
@@ -219,6 +219,14 @@ void UpdateRoom(char Room[HEIGHT][WEIGHT], PPLAYER player)
 			else if (Room[i][j] == '7')
 			{
 				cout << "◀";
+			}
+			else if (Room[i][j] == '8')
+			{
+				cout << "▦";
+			}
+			else if (Room[i][j] == '9')
+			{
+				cout << "◈";
 			}
 		}
 		cout << endl;
@@ -472,6 +480,22 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 		{
 			cout << endl;
 			room[stage - 4].PrintHintData(); cout << endl;
+		}
+		else if (Room[player->pos.y - 1][player->pos.x] == '8' ||
+			Room[player->pos.y + 1][player->pos.x] == '8' ||
+			Room[player->pos.y][player->pos.x - 1] == '8' ||
+			Room[player->pos.y][player->pos.x + 1] == '8'
+			)
+		{
+			
+		}
+		else if (Room[player->pos.y - 1][player->pos.x] == '9' ||
+		Room[player->pos.y + 1][player->pos.x] == '9' ||
+		Room[player->pos.y][player->pos.x - 1] == '9' ||
+		Room[player->pos.y][player->pos.x + 1] == '9'
+		)
+		{
+			
 		}
 	}
 	

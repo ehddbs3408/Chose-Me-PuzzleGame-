@@ -14,6 +14,7 @@ typedef struct _player
 	Position pos;
 	int stage = 0;
 	Item haveItem[10];
+	Item SpecialKey;
 	int itemCnt = -1;
 	
 	void GetItem(Item item)

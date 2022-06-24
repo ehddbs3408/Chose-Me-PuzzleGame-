@@ -6,6 +6,7 @@ enum ItemType
 	None,
 	Doorkey,
 	BoxKey,
+	SpecialKey,
 	Door,
 	NumberBox,
 	Hint
