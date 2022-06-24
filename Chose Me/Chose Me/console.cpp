@@ -1,4 +1,4 @@
-#include "head.h"
+ï»¿#include "head.h"
 
 void gotoxy(int x, int y)
 {
@@ -9,9 +9,9 @@ void gotoxy(int x, int y)
 
 void GameSetting()
 {
-	cout << "ÀÌµ¿ : ¡è ¡é ¡ç ¡æ" << endl;
-	cout << "»óÈ£ÀÛ¿ë : E" << endl;
-    cout << "Á¾·á : Q" << endl;
+	cout << "ì´ë™ : â†‘ â†“ â† â†’" << endl;
+	cout << "ìƒí˜¸ìž‘ìš© : E" << endl;
+    cout << "ì¢…ë£Œ : Q" << endl;
 }
 
 void UpLinePrompt(int count)
@@ -21,4 +21,23 @@ void UpLinePrompt(int count)
         cout << "\33[2K"; //line clear
         cout << "\x1b[A"; //up line (ESC [ A) must be support VT100 escape seq
     }
+}
+
+void GameClear()
+{
+
+
+        cout<<"..####....####...##...##..######...####...##......######...####...#####..    "<<endl;
+        cout<<".##......##..##..###.###..##......##..##..##......##......##..##..##..##.                "<<endl;
+        cout<<".##.###..######..##.#.##..####....##......##......####....######..#####..    "<<endl;
+        cout<<".##..##..##..##..##...##..##......##..##..##......##......##..##..##..##.                "<<endl;
+        cout<<"..####...##..##..##...##..######...####...######..######..##..##..##..##."<<endl;
+        cout<<".........................................................................                                                          "<<endl;
+}
+void CursorView()
+{
+    CONSOLE_CURSOR_INFO cursorInfo = { 0, };
+    cursorInfo.dwSize = 1;
+    cursorInfo.bVisible = FALSE;
+    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
 }

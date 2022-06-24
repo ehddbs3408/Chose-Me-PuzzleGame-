@@ -173,6 +173,30 @@ void SetRoom(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 		strcpy_s(Room[18], "0000100000000000060");
 		strcpy_s(Room[19], "1111100000000000000");
 		break;
+	case 7:
+		player->pos.x = 10;
+		player->pos.y = 19;
+		strcpy_s(Room[0], "1111111111111111111");
+		strcpy_s(Room[1], "1000000000000000001");
+		strcpy_s(Room[2], "1000000000000000001");
+		strcpy_s(Room[3], "1000000000000000001");
+		strcpy_s(Room[4], "1000000000000000001");
+		strcpy_s(Room[5], "1000000000000000001");
+		strcpy_s(Room[6], "1000000000000000001");
+		strcpy_s(Room[7], "1000070000000000001");
+		strcpy_s(Room[8], "1000000000007000001");
+		strcpy_s(Room[9], "1000000007000000001");
+		strcpy_s(Room[10], "1040007057000700001");
+		strcpy_s(Room[11], "1000000070700000001");
+		strcpy_s(Room[12], "1000007000000000001");
+		strcpy_s(Room[13], "1000000000000000001");
+		strcpy_s(Room[14], "1000000000000000001");
+		strcpy_s(Room[15], "1000000000000000001");
+		strcpy_s(Room[16], "1000000000000700001");
+		strcpy_s(Room[17], "1000000000000000001");
+		strcpy_s(Room[18], "1000000000000000001");
+		strcpy_s(Room[19], "1111111111011111111");
+		break;
 	default:
 		break;
 	}
@@ -228,6 +252,7 @@ void UpdateRoom(char Room[HEIGHT][WEIGHT], PPLAYER player)
 			{
 				cout << "◈";
 			}
+
 		}
 		cout << endl;
 	}
@@ -442,8 +467,71 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 			Room[player->pos.y][player->pos.x + 1] == '4'
 			)
 		{
-			cout << endl;
-			cout <<  "사람이 쓰러져있다." << endl;
+			if (stage == 7)
+			{
+				cout << endl;
+				cout << "사람이 쓰러져있다.. 구출할까?" << endl;
+				cout << "1.(구출하자) 외.(뭔가 이상해 빨리 여길 나가자)" << endl;
+				int input;
+				cin >> input;
+				if (input == 1)
+				{
+					system("cls");
+					cout << "┌┐" << endl;
+					cout << "││ " << "사람을 구출하셨습니다.! 축하합니다 게임을 클리어 하셨습니다!" << endl;
+					cout << "└┘" << endl;
+					Sleep(3000);
+					isNext = true;
+				}
+				else
+				{
+					cout << "┌┐" << endl;
+					cout << "││ " << "그것이 당신의 선택이군요. " << endl;
+					cout << "└┘" << endl;
+					Sleep(3000);
+					system("cls");
+						cout<<"$$##$#$$$$######################		                           "      <<endl;
+						cout<<"$$$##$$$#$#$#$##################								   "	  <<endl;
+						cout<<"#$$#$$$$$$$#$$ = ~: = $#############								  "		  <<endl;
+						cout<<"#$##$$$$$$$$:, , -- - ~; ############								   "	  <<endl;
+						cout<<"#$##$$$$$$=, ....., -~~= ##########										   "	  <<endl;
+						cout<<"$#$$$$$$$*     ..., , -: = #########											   "	  <<endl;
+						cout<<"##$$$$$$*     ...., -- : ; = ########											 "		  <<endl;
+						cout<<"##$#$$$$ - ..., , -~:; *########													 "	  <<endl;
+						cout<<"##$#$$$$.. .. ..., , -~:; *########												  "		  <<endl;
+						cout<<"#$###$$$.. ......, --~:!*########												 "		  <<endl;
+						cout<<"#$###$$!.... ..., , -~~:!*$#######												  "		  <<endl;
+						cout<<"######$; . ~. ..., , ~~:; !*########												 "	  <<endl;
+						cout<<"#######!.*$#:.., , --!$$ == @#######										   "	  <<endl;
+						cout<<"#######$, ..~!- , , --; $** *= @@######									   "	  <<endl;
+						cout<<"#######$, ..., , , , --; :; !*$@@######										   "	  <<endl;
+						cout<<"######## - .., , , , --~~:; !*$@@@#####									   "	  <<endl;
+						cout<<"######## - , , , , , , --~:;; **$@@@@####								   "	  <<endl;
+						cout<<"########; , , , , , --~~:; !*= @@@@@@@@#									"	  <<endl;
+						cout<<"########!:~, , -- - ~: ;; *= $@@@@@@@@#								  "		  <<endl;
+						cout<<"#########~= ~-- - ~~:; != = #@@@@@@@@#							 "		  <<endl;
+						cout<<"######### * ~@!- ~~:; !# *= @@@@@@@@@@						   "	  <<endl;
+						cout<<"##########::#@####@# = #@@@@@@@@@@						 "		  <<endl;
+						cout<<"@##########~:$@@@# * *#@@@@@@@@@@@					   "	  <<endl;
+						cout<<"@##@#@#####:~~~!: !*= @@@@@@@@@@@@						   "	  <<endl;
+						cout<<"@#@@@@@####~:::; !*= = @@@@@@###$$$							   "	  <<endl;
+						cout<<"@@@@@@@##@#~~:;; *= == ########$#$ =								"	  <<endl;
+						cout<<"@##@@$$$$$$:~: ; !**= $@@@####$$$$$								   "	  <<endl;
+						cout<<"====**= == *$@$ * !**$#@@@@####$$$$$									"	  <<endl;
+						cout<<"* *******= *#@@@@@@@@@@###$$$$$ = $$							   "	  <<endl;
+						cout<<"*= ***!!**= #@@@@@@@@@@##$$$$$$$$ =								"	  <<endl;
+						cout<<"***!!*!**= *$@#@@@@@@$$$$$$ == *= $$									 "	  <<endl;
+						cout<<"*= !***!!*****= = $$$====== = **= *= *=											"	  <<endl;
+						Sleep(500);
+						isNext = true;
+				}
+			}
+			else
+			{
+				cout << endl;
+				cout << "사람이 쓰러져있다." << endl;
+			}
+			
 		}
 		else if (Room[player->pos.y - 1][player->pos.x] == '5' ||
 			Room[player->pos.y + 1][player->pos.x] == '5' ||
@@ -451,26 +539,33 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 			Room[player->pos.y][player->pos.x + 1] == '5'
 			)
 		{
-
-			int input;
-			cout << " : ";
-			cin >> input;
-			if (input == room[stage - 4].GetBoxNum())
+			if (stage == 7)
 			{
-				if (Room[player->pos.y - 1][player->pos.x] == '5')
-					Room[player->pos.y - 1][player->pos.x] = '0';
-				if (Room[player->pos.y + 1][player->pos.x] == '5')
-					Room[player->pos.y + 1][player->pos.x] = '0';
-				if (Room[player->pos.y][player->pos.x - 1] == '5')
-					Room[player->pos.y][player->pos.x - 1] = '0';
-				if (Room[player->pos.y][player->pos.x + 1] == '5')
-					Room[player->pos.y][player->pos.x + 1] = '0';
-				Room[2][16] = '0';
+				cout << endl;
+				cout << "모니터가 망가져있다." << endl;
 			}
 			else
 			{
-				cout << "...";
-			}
+				int input;
+				cout << " : ";
+				cin >> input;
+				if (input == room[stage - 4].GetBoxNum())
+				{
+					if (Room[player->pos.y - 1][player->pos.x] == '5')
+						Room[player->pos.y - 1][player->pos.x] = '0';
+					if (Room[player->pos.y + 1][player->pos.x] == '5')
+						Room[player->pos.y + 1][player->pos.x] = '0';
+					if (Room[player->pos.y][player->pos.x - 1] == '5')
+						Room[player->pos.y][player->pos.x - 1] = '0';
+					if (Room[player->pos.y][player->pos.x + 1] == '5')
+						Room[player->pos.y][player->pos.x + 1] = '0';
+					Room[2][16] = '0';
+				}
+				else
+				{
+					cout << "...";
+				}
+			}		
 		}
 		else if (Room[player->pos.y - 1][player->pos.x] == '6' ||
 			Room[player->pos.y + 1][player->pos.x] == '6' ||
@@ -487,7 +582,17 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 			Room[player->pos.y][player->pos.x + 1] == '8'
 			)
 		{
-			
+			if (player->SpecialKey.GetItemType() != SpecialKey)
+			{
+				cout << endl;
+				cout << "문이 닫혀있다. 서버실이라 적혀있다." << endl;
+			}
+			else
+			{
+				cout << endl;
+				cout << "문이 열렸다." << endl;
+				isNext = true;
+			}
 		}
 		else if (Room[player->pos.y - 1][player->pos.x] == '9' ||
 		Room[player->pos.y + 1][player->pos.x] == '9' ||
@@ -496,6 +601,15 @@ void CheckInteraction(char Room[HEIGHT][WEIGHT], PPLAYER player,int stage)
 		)
 		{
 			
+			if (player->SpecialKey.GetItemType() != SpecialKey)
+			{
+				Item item;
+				char exstr[100] = "서버실 열쇠";
+				item.SetValue(exstr, SpecialKey);
+				player->SpecialKey = item;
+				cout << endl;
+				cout << "서버실 열쇠를 획득했다." << endl;
+			}
 		}
 	}
 	
@@ -509,7 +623,7 @@ void GetItem(char Room[HEIGHT][WEIGHT], PPLAYER player,int id)
 		key.SetValue(exstr, Doorkey);
 		player->GetItem(key);
 		cout << "┌┐" << endl;
-		cout << "││ "; key.PrintItemEx(); cout <<"를 획득하셨습니다.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+		cout << "││ "; key.PrintItemEx(); cout <<"를 획득하셨습니다." << endl;
 		cout << "└┘" << endl;
 		if (Room[player->pos.y - 1][player->pos.x] == '3')
 			Room[player->pos.y - 1][player->pos.x] = '0';
@@ -525,7 +639,7 @@ void GetItem(char Room[HEIGHT][WEIGHT], PPLAYER player,int id)
 		if (player->ShowItem().GetItemType() == Doorkey)
 		{
 			cout << "┌┐" << endl;
-			cout << "││ "; player->UseItem().PrintItemEx(); cout <<"를 사용하셨습니다.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+			cout << "││ "; player->UseItem().PrintItemEx(); cout <<"를 사용하셨습니다." << endl;
 			cout << "└┘" << endl;
 			if (Room[player->pos.y - 1][player->pos.x] == '2')
 				Room[player->pos.y - 1][player->pos.x] = '0';
@@ -540,7 +654,7 @@ void GetItem(char Room[HEIGHT][WEIGHT], PPLAYER player,int id)
 		else
 		{
 			cout << "┌┐" << endl;
-			cout << "││ " << "문이 닫혀있습니다.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" << endl;
+			cout << "││ " << "문이 닫혀있습니다." << endl;
 			cout << "└┘" << endl;
 		}
 	}

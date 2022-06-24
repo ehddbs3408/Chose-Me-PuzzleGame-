@@ -9,3 +9,5 @@ using namespace std;
 void gotoxy(int x, int y);
 void GameSetting();
 void UpLinePrompt(int count);
+void GameClear();
+void CursorView();
